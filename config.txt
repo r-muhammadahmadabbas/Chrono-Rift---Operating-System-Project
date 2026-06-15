@@ -1,0 +1,67 @@
+# Chrono Rift — runtime configuration
+# All processes read this file at startup.
+# Lines starting with # are ignored.
+# Format: key value
+
+# Shared memory
+shm_key         4321
+shm_version     6
+
+# Window size (optional)
+window_w        1152
+window_h        648
+
+# Game limits
+max_players     4
+max_enemies     9
+min_enemies     2
+name_len        32
+win_kill_count  10
+
+# Roll number seed (REPLACE with your actual roll number before demo)
+# Format: roll 24i-0512 -> 240512
+roll_seed       243058
+
+# Peterson process IDs
+proc_arbiter    0
+proc_hip        1
+proc_asp        2
+
+# Game phases (integer values used in shared memory)
+phase_start     0
+phase_select    1
+phase_playing   2
+phase_gameover  3
+phase_win       4
+
+# Player actions
+action_none     0
+action_strike   1
+action_exhaust  2
+action_heal     3
+action_skip     4
+action_quit     5
+
+# Milestone 6 actions
+action_use_weapon  6
+action_swap_in     7
+
+# Milestone 9
+action_ultimate    8
+
+# Enemy actions
+enemy_none      0
+enemy_strike    1
+enemy_skip      2
+
+# Stamina
+player_max_stamina  100
+enemy_max_stamina   150
+
+# Scheduler
+tick_ms         100
+npc_timeout_ticks 30
+hip_timeout_ticks 600
+
+# Milestone 6
+weapon_drop_pct 100
